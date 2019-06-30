@@ -1,0 +1,8 @@
+find Trendlyne/. -name *.py > cscope.files
+find Trendlyne/. -name *.html ! -path "*node_modules*" >> cscope.files
+find Trendlyne/. -name *.css ! -name *min.css ! -path "*node_modules*" >> cscope.files
+find Trendlyne/. -name *.js ! -name *min.js ! -path "*node_modules*" >> cscope.files
+find Trendlyne/. -name *.jsx ! -path "*node_modules*" >> cscope.files
+cscope -b
+ctags -L cscope.files
+
